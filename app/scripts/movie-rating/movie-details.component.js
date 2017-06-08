@@ -19,7 +19,7 @@
         controllerAs: 'model',
         controller: function () {
             var model = this;
-            model.$routerOnActivate = function (next,previos) {
+            model.$routerOnActivate = function (next,previous) {
                 console.log(next);
                 model.id = next.params.id;
             };

@@ -27,6 +27,7 @@ module.exports = function(config) {
       'bower_components/angular-component-router/ng_route_shim.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-animate/angular-animate.js',
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
