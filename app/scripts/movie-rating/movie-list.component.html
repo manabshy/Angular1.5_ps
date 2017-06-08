@@ -1,0 +1,52 @@
+<div>
+    {{ctrl.message}}
+    <input type="text" ng-model="ctrl.message">
+    <button type="button" class="btn btn-default|primary|success|info|warning|danger" ng-click="ctrl.changeMessage()">
+        Change Message
+    </button>
+
+</div>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Length</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="movie in ctrl.movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.length}}</td>
+            <td>
+                <movie-star star="movie.rating" max="4"
+                    set-rating="ctrl.setRating(movie,value)">;
+                </movie-star>
+            </td>
+            <td>
+                <button class="btn btn-default" ng-click="ctrl.upRating(movie)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                <button class="btn btn-default" ng-click="ctrl.downRating(movie)">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                <!--<a ng-link="['Details', {id: movie.id}]" class="btn btn-default">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </a>-->
+                <button ng-click="ctrl.goTo(movie.id)" class="btn btn-default">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </button>
+
+
+            </td>
+        </tr>
+    </table>
+    <accordion>
+        <accordion-panel heading="Panel 1">
+            This is panel 1
+        </accordion-panel>
+               <accordion-panel heading="Panel 2">
+            This is panel 2
+        </accordion-panel>
+    </accordion>
+</div>
